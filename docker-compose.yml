@@ -17,7 +17,7 @@ services:
   backend:
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile.backend
     container_name: health-backend
     ports:
       - "8095:8080"   # Backend available at localhost:8095
@@ -34,7 +34,7 @@ services:
   frontend:
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile.frontend
     container_name: health-frontend
     ports:
       - "8094:8080"   # Frontend available at localhost:8094
